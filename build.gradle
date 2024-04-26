@@ -1,0 +1,29 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.5'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'Design.Pattern'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0' // 이거 정리 해야됨...!!!
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

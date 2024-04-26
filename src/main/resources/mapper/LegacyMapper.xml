@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Design.Pattern.AntiCorruption.Layer.Pattern.LegacySystem.LegacyMapper">
+
+    <select id="getDataFromLegacyTable" parameterType="Design.Pattern.AntiCorruption.Layer.Pattern.LegacySystem.LegacyDto">
+        SELECT id, username, email FROM public.legacy_table;
+    </select>
+
+</mapper>
